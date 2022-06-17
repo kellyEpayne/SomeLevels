@@ -7,7 +7,7 @@ from SomeLevelsFiles.levelFive import LevelFive
 from SomeLevelsFiles.levelSix import LevelSix
 
 class LevelsHolder():
-    
+    # Holds on to all the levels
     def setup(game):
 
         match game.level:
@@ -24,6 +24,7 @@ class LevelsHolder():
             case 6:
                 LevelSix.setup(game)
             case _:
+                # If game.level doesn't match one of these cases then the level will be set to one and called again
                 game.level = 1
                 game.setup()
                 
@@ -43,7 +44,9 @@ class LevelsHolder():
                 LevelFive.update(game)
             case 6:
                 LevelSix.update(game)
+            # The is no end case for this one because this point shouldn't be reached outside of the range
                 
     def addFriend(game):
-        
+
+        # This function is call addFriend from LevelBase        
         LevelBase.addFriend(game)

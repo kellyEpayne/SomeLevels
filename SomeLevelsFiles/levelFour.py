@@ -12,6 +12,8 @@ class LevelFour(LevelBase):
     def update(game):
         LevelBase.update(game)
 
+        # The win condition for the level is creating a friend
+        # This knowledge is needed for the next level
         if game.friend > 0:
             game.doorOpen = True
             game.scene["DoorOpened"].visible = True

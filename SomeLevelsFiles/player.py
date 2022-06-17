@@ -6,7 +6,7 @@ class Player(arcade.Sprite):
     def __init__(self):
         super().__init__()
 
-        self.scale = scale
+        self.scale = scale 
         self.textures = []
 
         texture = arcade.load_texture("SomeLevelsFiles/Resources/Player.png")

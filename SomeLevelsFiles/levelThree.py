@@ -11,6 +11,7 @@ class LevelThree(LevelBase):
     def update(game):
         LevelBase.update(game)
 
+        # The win condition for the level is to press the button atleast once and to collect all the coins
         if game.buttonPressCount > 0:
             if len(game.scene["Coins"]) == 0:
                 game.doorOpen = True

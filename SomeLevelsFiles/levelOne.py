@@ -12,6 +12,7 @@ class LevelOne(LevelBase):
     def update(game):
         LevelBase.update(game)
 
+        # The win condition for the level is to press the button atleast one time
         if game.buttonPressCount > 0:
             game.doorOpen = True
             game.scene["DoorOpened"].visible = True
